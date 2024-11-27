@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div>Company Logo</div>
+            <div>
+                <a href="main.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#products">Products/Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="#inquiry">Inquiry</a>
+            </div>
+        </nav>
+        <section class="hero-section">
+            <h1>RG Tech</h1>
+            <p>"Info to be followed"</p>
+        </section>
+        <form class="search-bar" action="/search" method="GET">
+            <input type="text" name="query" placeholder="Search..." />
+            <button type="submit">SEARCH</button>
+        </form>
+        <section id="Products" class="hero-section">
+            <div class="slideshow-container">
+                <h2 class="naems">Products/Services</h2>
+                <div class="slide">
+                    <div class="image-card">
+                        <a href="https://www.pinoytechnoguide.com/smartphones/infinix-zero-flip-5g">
+                            <img src="https://gadgetsuite.net/wp-content/uploads/2024/10/Infinix-Zero-Flip.webp" alt="Infinix ZERO Flip">
+                            <span class="badge">New</span>
+                            <p>Infinix ZERO Flip</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.pinoytechnoguide.com/smartphones/infinix-zero-40-5g" class="links">
+                            <img src="https://cdn-files.kimovil.com/default/0010/73/thumb_972381_default_big.jpg" alt="Infinix ZERO 40 5G">
+                            <span class="badge">New</span>
+                            <p>Infinix ZERO 40 5G</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <img src="vivo-y19s.jpg" alt="Vivo Y19s">
+                        <span class="badge">New</span>
+                        <p>Vivo Y19s</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="samsung-galaxy-a16.jpg" alt="Samsung Galaxy A16">
+                        <span class="badge">New</span>
+                        <p>Samsung Galaxy A16</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="itel-s25-ultra.jpg" alt="itel S25 Ultra">
+                        <span class="badge">New</span>
+                        <p>itel S25 Ultra</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="infinix-note-40s.jpg" alt="Infinix NOTE 40s">
+                        <span class="badge">New</span>
+                        <p>Infinix NOTE 40s</p>
+                    </div>
+                </div>
+                <!-- navigation arrows for slide_show -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+<footer>
+            <h2>Contact Information</h2>
+            <p>Address: 123 Tech Street, Innovation City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@yourcompany.com</p>
+          </footer>
+
+    <!-- Go Back to Top Button -->
+    <button id="backToTop">⬆️ Back to Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
