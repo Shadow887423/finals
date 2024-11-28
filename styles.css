@@ -191,7 +191,7 @@ button:hover {
 }
 
 
-/*about us*/
+/*back to top*/
 .info{
     padding: 4rem 2rem;
     align-items: center;
@@ -217,4 +217,33 @@ button:hover {
 
 #backToTop:hover {
     background-color: #0056b3;
+}
+
+/*about*/
+.creators-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  margin-top: 30px;
+}
+
+.creator {
+  text-align: center;
+}
+
+.creator img {
+  width: 23rem;
+  height: 29rem;
+  border-radius: 70%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.creator p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
 }
