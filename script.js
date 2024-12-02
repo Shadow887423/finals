@@ -1,15 +1,16 @@
-/*slides*/
+/* Slideshow */
+
 // For Phones slide
-let currentSlideIndex1 = 0; // For Phones section
-const slide1 = document.querySelector('.slide'); // Phones slide container
-const totalCards1 = document.querySelectorAll('.slide .image-card').length; // Total cards in Phones section
-const visibleCards = 5; // Number of visible cards in the viewport
-const cardWidth = 170; // Width of each card including margin
+let currentSlideIndex1 = 0;
+const slide1 = document.querySelector('.slide');
+const totalCards1 = document.querySelectorAll('.slide .image-card').length;
+const visibleCards = 5;
+const cardWidth = 170;
 
 // For Laptops slide
-let currentSlideIndex2 = 0; // For Laptops section
-const slide2 = document.querySelector('.slide2'); // Laptops slide container
-const totalCards2 = document.querySelectorAll('.slide2 .image-card2').length; // Total cards in Laptops section
+let currentSlideIndex2 = 0;
+const slide2 = document.querySelector('.slide2');
+const totalCards2 = document.querySelectorAll('.slide2 .image-card2').length;
 
 // Function to move the slide (Reusable for Phones and Laptops)
 function moveSlide(slide, currentIndex, totalCards, direction) {
@@ -44,22 +45,37 @@ document.querySelector('.next2').addEventListener('click', () => {
     currentSlideIndex2 = moveSlide(slide2, currentSlideIndex2, totalCards2, 1);
 });
 
-
-// Get the modal 
+// Login Functionality
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 };
 
+// Save user data to localStorage
+function saveUserData(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    const username = document.getElementById('uname').value;
+    const password = document.getElementById('psw').value;
+
+    // Save data to localStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+
+    alert('User data saved locally!');
+    window.location.href = 'main.html';
+}
+
+// Back to Top Button
 const backToTopButton = document.getElementById('backToTop');
 
 // Show button when user scrolls down
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) { // Show button after scrolling 300px
+    if (window.scrollY > 50) {
         backToTopButton.style.display = 'block';
     } else {
         backToTopButton.style.display = 'none';
@@ -73,5 +89,4 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-
 
